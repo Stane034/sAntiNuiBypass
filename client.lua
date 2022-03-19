@@ -43,7 +43,7 @@ function StartChecking()
     Wait(20) -- Wait 20 miliseconds
     JSLoaded = false -- We set JSLoaded to false because we are waiting for javascript to send the heartbeat again
     SetTimeout(5000, StartChecking) -- Here we make a thread that will call a function StartChecking every 5000 milliseconds
-end)
+end
 
 Citizen.CreateThread(function()
     Wait(5000) -- We will wait 5000 miliseconds for javascript to send heartbeat to lua 
